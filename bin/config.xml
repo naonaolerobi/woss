@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<woss>
+	<gather class="com.client.Gather">
+		<path>src/com/data/radwtmp</path>
+		<gatherFileName>gather.bak</gatherFileName>
+		<countFileName>count.bak</countFileName>
+	</gather>
+	
+	<client class="com.client.Client">
+		<ip>127.0.0.1</ip>
+		<port>8888</port>
+		<bakFileName>client.bak</bakFileName>
+	</client>
+	
+	<server class="com.server.Server">
+		<port>8888</port>
+	</server>
+	
+	<DBStore class="com.server.DBStore">
+		<driverName>oracle.jdbc.OracleDriver</driverName>
+		<url>jdbc:oracle:thin:@localhost:1521:orcl</url>
+		<user>woss</user>
+		<password>woss</password>
+		<bakFileName>DBStore.bak</bakFileName>
+	</DBStore>
+	
+	<backup class="com.common.Backup">
+		<path>src/com/data/</path>
+	</backup>
+	
+	<logger class="com.common.WossLogger">
+		<clientLoggerName>clientLogger</clientLoggerName>
+		<serverLoggerName>serverLogger</serverLoggerName>
+		<logPropertiesLocation>src/log4j.properties</logPropertiesLocation>
+	</logger>
+</woss>	
